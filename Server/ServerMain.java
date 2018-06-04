@@ -28,7 +28,7 @@ public class ServerMain {
 				Socket socket = serverSocket.accept();
 				InforCliente clienteInfor =new InforCliente();
 				clienteInfor.mSocket = socket;
-				System.out.println("acepto concexiones");
+				System.out.println("Aceptando Conexiones...");
 				
 				Cliente cliente = new Cliente(clienteInfor,mServerthings);
 				

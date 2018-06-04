@@ -16,6 +16,7 @@ public class Cliente extends Thread{
 	private static Vector mListConsultas = new Vector();
 	
 	public Cliente (InforCliente mInforCli, ServerThings mServer) throws IOException {
+		System.out.println("Cliente Conectado");
 		this.infCli=mInforCli;
 		this.server=mServer;
 		Socket socket = mInforCli.mSocket;

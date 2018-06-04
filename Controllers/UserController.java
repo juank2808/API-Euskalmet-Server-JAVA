@@ -65,7 +65,7 @@ public class UserController {
 	public static boolean compruebaUser(String nombre, String pass) {
 		cargarUsers();
 		for(int i = 0 ; i<usuarios.size();i++) {
-			if(!nombre.equals(usuarios.get(i).getNombre_usuario()) && !pass.equals(usuarios.get(i).getContrasena())) {
+			if(!nombre.equals(usuarios.get(i).getNombre_usuario()) || !pass.equals(usuarios.get(i).getContrasena())) {
 				System.out.println("El usuario No existe");
 				Cliente.addConsultas("ACCESO: UsuarioIncorrecto");
 				cargarUsers();
